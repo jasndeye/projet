@@ -33,7 +33,18 @@ public class CalculatorTest extends TestCase  {
 	public void testMultiply(){
 		Assert.assertEquals(12, cal.multiply(3,4));
 	}
+	@Test
+	public void testMin(){
+		int min = cal.min(10,20);
+		if (min != 10) Assert.fail();
+	}
 
+	@Test 
+	public void testMax(){
+		int max = cal.max(2000, -2000);
+		Assert.assertEquals(2000,max);
+	}
+	
 	
 	
 
