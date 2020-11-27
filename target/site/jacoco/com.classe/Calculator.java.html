@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="fr"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../jacoco-resources/report.css" type="text/css"/><link rel="shortcut icon" href="../jacoco-resources/report.gif" type="image/gif"/><title>Calculator.java</title><link rel="stylesheet" href="../jacoco-resources/prettify.css" type="text/css"/><script type="text/javascript" src="../jacoco-resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../jacoco-sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">projetGL</a> &gt; <a href="index.source.html" class="el_package">com.classe</a> &gt; <span class="el_source">Calculator.java</span></div><h1>Calculator.java</h1><pre class="source lang-java linenums">package com.classe;
+
+import java.util.Arrays;
+
+<span class="fc" id="L5">public class Calculator</span>
+{
+    public int sum(int a, int b)
+    {
+<span class="fc" id="L9">        return a+b;</span>
+    }
+    
+      public  int minus(int a, int b)
+    {
+<span class="fc" id="L14">        return a-b;</span>
+    }
+      
+    public int divide(int a, int b)
+    {
+<span class="fc" id="L19">        return a/b;</span>
+    }
+    
+    public int multiply(int a, int b)
+    {
+<span class="fc" id="L24">        return a*b;</span>
+    }
+    
+    public int min(int a, int b)
+    {
+<span class="pc bpc" id="L29" title="1 of 2 branches missed.">        if(a&lt;=b)</span>
+<span class="fc" id="L30">           return a;</span>
+        else 
+<span class="nc" id="L32">            return b;</span>
+    }
+    
+    public int max(int a, int b)
+    {
+<span class="pc bpc" id="L37" title="1 of 2 branches missed.">         if(a&lt;=b)</span>
+<span class="nc" id="L38">           return b;</span>
+        else 
+<span class="fc" id="L40">            return a;</span>
+    }
+    
+    public int minElement(int[] list)
+    {
+<span class="fc" id="L45">       Arrays.sort(list);</span>
+<span class="fc" id="L46">       return list[0];</span>
+    }
+    
+    public int maxElement(int[] list)
+    {
+<span class="fc" id="L51">       Arrays.sort(list);</span>
+<span class="fc" id="L52">       return list[list.length-1];</span>
+    }
+    
+}
+</pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.6.202009150832</span></div></body></html>
