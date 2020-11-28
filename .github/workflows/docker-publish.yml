@@ -26,5 +26,3 @@ jobs:
           DOCKER_PASSWORD: ${{secrets.DOCKER_PASSWORD}}    
         run: |
             docker login -u $DOCKER_USER 6P $DOCKER_PASSWORD
-      - name: Build the Docker image
-        run: docker build . --file DockerFile --tag chamodshehanka/node-
