@@ -1,28 +1,24 @@
 name: Docker
-
 on:
   push:
-    # Publish `master` as Docker `latest` image.
     branches:
       - master
-  # Run tests for any PRs.
   pull_request:
     branches: 
       - master
 
 jobs:
-  # Run tests.
-  # See also https://docs.docker.com/docker-hub/builds/automated-testing/
   build:
     runs-on: ubuntu-latest
-
     steps:
       - uses: actions/checkout@v2
-      - name: Docker
-        env:
-          image: dioumella123/projet
-          registry: docker.io   
+      - name: docker login
+        env:   
           DOCKER_USER: ${{secrets.DOCKER_USER}}
-          DOCKER_PASSWORD: ${{secrets.DOCKER_PASSWORD}}    
+          DOCKER_PASSWORD: ${{secrets.DOCKER_PASSWORD}}  
         run: |
-            docker login -u $DOCKER_USER 6P $DOCKER_PASSWORD
+           docker login -u $DOCKER_USER -p $DOCKER_PASSWORD
+      - name: Build the Docker image
+        run: docker build .--file DockerFile --tag dioumella123/pojet:(date +%$)
+      - name: Docker Push
+        run: docker push ${{ secrets.DOCKER_USER}}      
