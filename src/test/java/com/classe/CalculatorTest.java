@@ -45,7 +45,19 @@ public class CalculatorTest extends TestCase  {
 		Assert.assertEquals(2000,max);
 	}
 	
-	
+	@Test
+	public void testMinElement(){
+		int tab[]= {2,1,8};
+		int min = cal.minElement(tab);
+		if (min != 1) Assert.fail();
+	}
+
+	@Test 
+	public void testMaxElement(){
+		int tab[]= {2,3,8};
+		int min = cal.maxElement(tab);
+		if (min != 8) Assert.fail();
+	}
 	
 
 }
