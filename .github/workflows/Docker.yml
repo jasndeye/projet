@@ -18,7 +18,7 @@ jobs:
 
     steps:
       - uses: actions/checkout@v2
-      - name: docker login
+      - name: Docker
         env:
           image: dioumella123/projet
           registry: docker.io   
