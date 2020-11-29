@@ -1,6 +1,6 @@
 FROM openjdk:8-jdk-alpine
 
-ARG JAR_FILE=target/projectGL.jar
+ARG JAR_FILE=target/projet.jar
 ARG JAR_LIB_FILE=target/lib/
 
 # cd /usr/local/runme
